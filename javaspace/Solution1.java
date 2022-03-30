@@ -1,6 +1,6 @@
 import java.util.*;
 
-// 1541 잃어버린 괄호
+// BOJ - 1541 잃어버린 괄호
 public class Solution1 {
     public static void solution1() {
         Scanner sc = new Scanner(System.in); 

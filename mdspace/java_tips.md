@@ -36,6 +36,31 @@ for(int i = 1; i <= 10; i++) {
 for(Integer i : list) { 
 	System.out.println(i);
 }
+
+// 2차원 배열 for 문
+for(int[] temp : score) {
+    for(int i : temp) {
+        sum += i;
+    }
+}
+
+// Map for 문
+// 방법1)
+for (String key : map.keySet()) {
+    System.out.println("key : " + key +" / value : " + map.get(key));
+}
+ 
+// 방법2)
+for (Map.Entry<String, String> entry : map.entrySet()) {
+    System.out.println("key : " + entry.getKey() +" / value : " + entry.getKey());
+}
+ 
+// 방법3)
+Iterator<String> keys = map.keySet().iterator();
+while (keys.hasNext()) {
+    String key = keys.next();
+    System.out.println("key : " + key +" / value : " + map.get(key));
+}   
 ```
 
 4. Math

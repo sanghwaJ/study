@@ -25,5 +25,8 @@
 - [BOJ 1541 - 잃어버린 괄호](javaspace/Solution1.java)
 - [프로그래머스 - 네트워크](javaspace/Solution2.java)
 - [프로그래머스 - 타겟넘버](javaspace/Solution3.java)
+- [프로그래머스 - 위장](javaspace/Solution4.java)
+- [프로그래머스 - 전화번호 목록](javaspace/Solution5.java)
 ### 📌 Python
+- [프로그래머스 - 전화번호 목록](pythonspace/Solution1.ipynb)
 ---

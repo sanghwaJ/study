@@ -1,6 +1,6 @@
 import java.util.*;
 
-// PRO - 네트워크
+// 프로그래머스 - 네트워크
 public class Solution2 {
     public static int solution2(int n, int[][] computers) {
         int answer = 0;

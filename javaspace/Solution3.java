@@ -1,6 +1,6 @@
 import java.util.*;
 
-// PRO - 타겟넘버
+// 프로그래머스 - 타겟넘버
 public class Solution3 {
     public static int solution3(int[] numbers, int target) {
         int answer = 0;
