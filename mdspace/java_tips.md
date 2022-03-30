@@ -8,7 +8,7 @@
 import java.util.*;
 ```
 
-1. 형변환
+2. 형변환
 
 ```java
 // String -> int
@@ -24,7 +24,7 @@ Long.valueOf(i).intValue();
 System.out.println(map.get("list").getClass().getName());
 ```
 
-1. for 문 형식
+3. for 문 형식
 
 ```java
 // idx를 이용한 for 문
@@ -38,7 +38,7 @@ for(Integer i : list) {
 }
 ```
 
-1. Math
+4. Math
 
 ```java
 // max
