@@ -1,12 +1,12 @@
 
-# Java - String, StringBuffer, StringBuilder
+# Java - String & StringBuffer & StringBuilder
 
 <p align="center"><img src="../imagespace/javatips3.jpg"></p>
 
 - String VS StringBuffer VS StringBuilder
-    - String : 문자열 연산이 적고 멀티스레드 환경인 경우 사용
-    - StringBuffer : 문자열 연산이 많고 멀티스레드 환경인 경우 사용
-    - StringBuilder : 문자열 연산이 많고 단일스레드이거나 동기화를 고려하지 않아도 되는 경우 사용
+    - String : 문자열 연산이 적고 조회가 많은 멀티스레드 환경인 경우 사용
+    - StringBuffer : 문자열 연산이 많고 멀티스레드 환경인 경우 사용 (Thread-Safe 함)
+    - StringBuilder : 문자열 연산이 많고 단일스레드이거나 동기화를 고려하지 않아도 되는 경우 사용 (Thread-Safe 하지 않음)
 
 ```java
 // StringBuffer
