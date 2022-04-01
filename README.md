@@ -10,13 +10,16 @@
 ### 📌 Java
 - [Java Tips for Coding Test](mdspace/java_tips.md)
 - [Java - Getter & Setter](mdspace/java_getterAndSetter.md)
-- [Java - Overloading & Overriding](mdspace/java_overloadingAndOverriding.md)
+- [Java - Casting(업캐스팅, 다운캐스팅)](mdspace/java_casting.md)
+- [Java - 상속](mdspace/java_inheritance.md)
 - [Java - 추상화(Abstraction)와 다형성(Polymorphism)](mdspace/java_AbstractionAndPolymorphism.md)
+- [Java - Overloading & Overriding](mdspace/java_overloadingAndOverriding.md)
+- [Java - 예외처리 (throw / try / catch / finally)](mdspace/java_exception.md)
 - [Java - 메소드의 구분](mdspace/java_method.md)
 - [Java - this](mdspace/java_this.md)
 - [Java - 싱글톤 패턴](mdspace/java_singleton.md)
 - [Java - String & StringBuffer & StringBuilder](mdspace/java_string,sbf,sbd.md)
-- [Java - 예외처리 (throw / try / catch / finally)](mdspace/java_exception.md)
+
 ### 📌 Python
 ### 📌 JavaScript
 ### 📌 Swift

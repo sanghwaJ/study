@@ -69,19 +69,19 @@ public int getScore(){
 ```Java
 switch(student[i].getScore()/10){
     case 10:
-    case  9:
+    case 9:
         // 100점~90점대 A
         System.out.println("A");
         break;
-    case  8:
+    case 8:
         // 80점대 B
         System.out.println("B");
         break;
-    case  7:
+    case 7:
         // 70점대 C
         System.out.println("C");
         break;
-    case  6:
+    case 6:
         // 60점대 D
         System.out.println("D");
         break;
