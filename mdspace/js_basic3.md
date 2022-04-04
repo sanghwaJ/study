@@ -1,6 +1,3 @@
-javascript:(function(){$(".pagehead, .header, .file-history-tease, .breadcrumb, .file .meta, #footer").remove();$(".file").css("border","none");$(".entry-content p").css({margin:0,"text-indent":"1em"});$(".entry-content").css("color","#000")})()
-
-
 # JavaScript - Prototype, Class
 
 ## 1. Prototype

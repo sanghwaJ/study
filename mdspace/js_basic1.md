@@ -12,7 +12,7 @@ Event Loop는 여러 쓰레드를 사용하는데, 그 중 JavaScript 코드가 
 
 ## 2. Call Stack
 
-Call Stack이란, 지금의 시점까지 Call 된 함수들으 ㅣ스택으로, 함수가 호출될 때 쌓이고, 리턴할 때 빠지게된다.
+Call Stack이란, 지금의 시점까지 Call 된 함수들의 스택으로, 함수가 호출될 때 쌓이고, 리턴할 때 빠지게된다.
 
 ```JavaScript
 function f3() {}
