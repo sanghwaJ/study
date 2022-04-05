@@ -23,6 +23,8 @@ System.out.println(str.contains("World")); // true
 ## 2. Pattern 클래스
 - java.util.regex.pattern 클래스의 matches() 활용
 - 검증 후 대상 문자열이 정규표현식과 일치하면 true, 그렇지 않다면 false 리턴
+- 문자열로 정의된 정규표현식은 사용되기 전에 Pattern 클래스의 인스턴스로 컴파일 되어야 함(Pattern.compile())
+- 컴파일된 패턴은 Matcher 객체를 만드는데 사용되며, Matcher 객체는 임의의 입력 문자열이 패턴에 부합되는지 여부를 체크함
 
 ```Java
 import java.util.regex.Pattern
