@@ -132,7 +132,7 @@ public class TestJava017 {
 		return r * r * 3.14;
 	}
 }
-​```
+```
 
 ex 2) 변수 num1과 num2의 값을 이용하여, num1과 num2의 승을 구하기
 

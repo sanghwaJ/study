@@ -1,6 +1,26 @@
 # Java - 정규표현식 (Pattern & Matcher)
 
-## 1. Pattern 클래스
+## 1. String.matches() & String.contains()
+
+### 1-1. String.matches()
+- matches()는 인자로 정규표현식을 받으며, 문자열과 패턴이 일치하는지를 true나 false로 반환한다.
+
+```Java
+String str = "HelloWorld";
+
+System.out.println(str.matches("^[A-Za-z]*$")); // true
+```
+
+### 1-2. String.contains()
+- contains()는 인자로 문자열을 받으며, 해당 문자열이 비교 문자열에 존재하는지를 true나 false로 반환한다.
+
+```Java
+String str = "HelloWorld";
+
+System.out.println(str.contains("World")); // true
+```
+
+## 2. Pattern 클래스
 - java.util.regex.pattern 클래스의 matches() 활용
 - 검증 후 대상 문자열이 정규표현식과 일치하면 true, 그렇지 않다면 false 리턴
 
@@ -21,7 +41,7 @@ public class RegexEx {
 
 <br/>
 
-## 2. Pattern 클래스의 주요 메소드
+## 3. Pattern 클래스의 주요 메소드
 - compile(String regex) : 주어진 정규표현식으로부터 패턴을 만듬
 - matcher(CharSequence input) : 대상 문자열이 패턴과 일치할 경우 true 반환
 - asPredicate() : 문자열을 일치시키는 데 사용할 수 있는 술어 작성
@@ -30,7 +50,7 @@ public class RegexEx {
 
 <br/>
 
-## 3. Matcher 클래스
+## 4. Matcher 클래스
 - 대상 문자열의 패턴을 해석하고, 주어진 패턴과 일치하는지 판별할 때 사용
 - Matcher 객체는 Pattern 객체의 matcher() 메소드를 호출 받아 올 수 있음
 
@@ -51,7 +71,7 @@ public class RegexExample {
 
 <br/>
 
-## 4. Matcher 클래스의 주요 메소드
+## 5. Matcher 클래스의 주요 메소드
 - matches() : 대상 문자열과 패턴이 일치할 경우 true 반환
 - find() : 대상 문자열과 패턴이 일치하는 경우 true를 반환하고, 그 위치로 이동
 - find(int start) : start위치 이후부터 매칭 검색을 수행
@@ -65,7 +85,7 @@ public class RegexExample {
 
 <br/>
 
-## 5. 정규표현식 문법
+## 6. 정규표현식 문법
 |정규표현식|설명|
 |:---:|---|
 |^|문자열 시작|
@@ -95,7 +115,7 @@ public class RegexExample {
 
 <br/>
 
-## 6. 자주 사용하는 정규표현식
+## 7. 자주 사용하는 정규표현식
 
 |정규표현식|설명|
 |---|---|
