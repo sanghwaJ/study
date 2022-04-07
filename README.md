@@ -5,16 +5,20 @@
 ### 📌 알고리즘
 ### 📌 기타
 - [프로그램, 프로세스, 스레드(멀티스레드, 싱글스레드)](mdspace/program,process,thread.md)
+- [라이브러리, 프레임워크, 아키텍처, API(+ RESTful API)](mdspace/libraryAndFrameworkAndEtc.md)
 ---
 ## 💻 Language
 ### 📌 Java
 - [Java Tips for Coding Test](mdspace/java_tips.md)
 - [Java - Map (HashMap, TreeMap, LinkedHashMap)](mdspace/java_map.md)
 - [Java - Getter & Setter](mdspace/java_getterAndSetter.md)
+- [Java - JVM(Java Virtual Machine) & Java 컴파일](mdspace/java_jvm.md)
 - [Java - Casting(업캐스팅, 다운캐스팅)](mdspace/java_casting.md)
+- [Java - Call by Value & Call by Reference](mdspace/java_call.md)
 - [Java - 상속](mdspace/java_inheritance.md)
 - [Java - 추상화(Abstraction)와 다형성(Polymorphism)](mdspace/java_AbstractionAndPolymorphism.md)
 - [Java - Overloading & Overriding](mdspace/java_overloadingAndOverriding.md)
+- [Java - Garbage Collection](mdspace/java_gc.md)
 - [Java - 예외처리 (throw / try / catch / finally)](mdspace/java_exception.md)
 - [Java - 메소드의 구분](mdspace/java_method.md)
 - [Java - this](mdspace/java_this.md)
