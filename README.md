@@ -9,6 +9,7 @@
 ## 💻 Language
 ### 📌 Java
 - [Java Tips for Coding Test](mdspace/java_tips.md)
+- [Java - Map (HashMap, TreeMap, LinkedHashMap)](mdspace/java_map.md)
 - [Java - Getter & Setter](mdspace/java_getterAndSetter.md)
 - [Java - Casting(업캐스팅, 다운캐스팅)](mdspace/java_casting.md)
 - [Java - 상속](mdspace/java_inheritance.md)
