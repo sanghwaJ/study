@@ -4,40 +4,25 @@ import java.util.*;
 
 public class Solution6 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in); 
-        String temp = sc.nextLine(); 
-        String[] _dices = temp.split(" "); 
+        Scanner sc = new Scanner(System.in);
+        Integer a = sc.nextInt();
+        Integer b = sc.nextInt();
+        Integer c = sc.nextInt();
 
-        Integer[] dices = new Integer[_dices.length];
-        for(int i = 0; i < _dices.length; i++){
-            dices[i] = Integer.parseInt(_dices[i]);
-        }
-
-        solution(dices);
+        solution(a, b, c);
 
         sc.close(); 
     }
 
-    public static Integer solution(Integer[] dices) {
-        HashSet<Integer> set_dices = new HashSet<>();
-        for(int i = 0; i < dices.length; i++){
-            set_dices.add(dices[i]);
-        }
-        
-        Integer answer = 0;
-        if(set_dices.size() == 1){
-            answer = 10000 + dices[0] * 1000;
-            System.out.println(answer);
-            return answer;
-        } else if(set_dices.size() == 2){
-            answer = 1000 + dices[1] * 100;
-            System.out.println(answer);
-            return answer;
+    public static void solution(Integer a, Integer b, Integer c) {
+        if(a == b && a == c && b == c) {
+            System.out.print(10000+(a*1000));
+        } else if(a == b || a == c) {
+            System.out.print(1000+(a*100));
+        } else if(b == c) {
+            System.out.print(1000+(b*100));
         } else {
-            Arrays.sort(dices);
-            answer = dices[dices.length - 1] * 100;
-            System.out.println(answer);
-            return answer;
+            System.out.print((Math.max(a, Math.max(b, c))*100));
         }
     }   
 }

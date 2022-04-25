@@ -403,6 +403,8 @@ set.add("b");
 
 System.out.println(set); // [a, b, c, d]
 
+// HashSet은 get으로 인덱스를 통해 요소를 뽑아 오지 못함!
+// 따라서 아래의 방식으로 접근해야함
 Iterator<String> iter = set.iterator();
 while(iter.hasNext()) {
 	System.out.println(iter.next()); // a b c d
