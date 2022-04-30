@@ -224,20 +224,19 @@ print((lambda n, m : n if n % 2 == 0 else m)(2, 3))
 ```python
 # 1-4. lambda 함수를 이용하여 작성한 map, filter, reduce
 
-l = list(range(1, 11))
-print(l)
-# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+lst = list(range(1, 11))
+print(lst) # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # map() : 함수와 리스트를 인자로 받아 리스트의 원소를 하나씩 꺼내어 함수를 적용
-m = list(map(lambda n : n * n, l))
+m = list(map(lambda n : n * n, lst))
 print(m) # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
  
 # filter() : 함수와 리스트를 인자로 받아 리스트의 원소를 하나씩 꺼내어 함수에 적용시킨 결과가 참인 것들로 새로운 리스트를 만듬
-f = list(filter(lambda n : n % 2 == 0, l))
+f = list(filter(lambda n : n % 2 == 0, lst))
 print(f) # [2, 4, 6, 8, 10]
 
 # reduce() : 함수와 문자열, 튜플, 리스트 등을 인자로 받아 원소들을 누적하여 함수에 적용
-r = reduce(lambda n, m : n * m, l)
+r = reduce(lambda n, m : n * m, lst)
 print(r) # 3628800
 ```
 
