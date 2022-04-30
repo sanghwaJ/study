@@ -12,7 +12,7 @@
 - [Java - 메소드의 구분](mdspace/java_method.md)
 - [Java - 싱글톤 패턴](mdspace/java_singleton.md)
 - [Java - Getter & Setter](mdspace/java_getterAndSetter.md)
-
+### 📌 JavaScript
 ### 📌 Python
 ### 📌 기타
 - [프로그램, 프로세스, 스레드(멀티스레드, 싱글스레드)](mdspace/program,process,thread.md)
@@ -20,22 +20,23 @@
 ---
 ## 💻 Language
 ### 📌 Java
-- [Java Tips for Coding Test](mdspace/java_tips.md)
-- Java 자료구조
-  - [Java - 배열(Array)](mdspace/java_array.md)
-  - [Java - Queue & Stack](mdspace/java_queueAndStack.md)
+- [Java Tips](mdspace/java_tips.md)
+- [Java - 배열(Array)](mdspace/java_array.md) 
+- [Java - Queue & Stack](mdspace/java_queueAndStack.md)
 - [Java - String & StringBuffer & StringBuilder](mdspace/java_string,sbf,sbd.md)
 - [Java - 정규표현식 (Pattern & Matcher)](mdspace/java_regex.md)
 - [Java - 예외처리 (throw / try / catch / finally)](mdspace/java_exception.md)
 - [Java - this](mdspace/java_this.md)
 - [Java - Map (HashMap, TreeMap, LinkedHashMap)](mdspace/java_map.md)
 
-
-### 📌 Python
 ### 📌 JavaScript
 - [JavaScript - 실행 모델 (Event Loop, Call Stack, Run-to-completion, Callback Queue, Offloading)](mdspace/js_basic1.md)
 - [JavaScript - Hoisting, Scope, Closure](mdspace/js_basic2.md)
 - [JavaScript - Prototype, Class](mdspace/js_basic3.md)
+
+### 📌 Python
+- [Python Tips](mdspace/python_tips.md)
+
 ### 📌 Swift
 ### 📌 Node.js
 ---
@@ -43,7 +44,7 @@
 ### 📌 Linux
 ### 📌 Database
 ---
-## 👨‍💻 Coding Test
+## 👨‍💻 Algorithm
 ### 📌 Java
 - [BOJ - 1541. 잃어버린 괄호](javaspace/Solution1.java)
 - [프로그래머스 - 네트워크](javaspace/Solution2.java)
@@ -54,4 +55,6 @@
 - [BOJ - 2484. 주사위네개](javaspace/Solution7.java)
 ### 📌 Python
 - [프로그래머스 - 전화번호 목록](pythonspace/Solution1.ipynb)
+- [BOJ - 2480. 주사위세개](pythonspace/Solution2.ipynb)
+- [BOJ - 2484. 주사위네개](pythonspace/Solution3.ipynb)
 ---
