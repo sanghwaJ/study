@@ -58,4 +58,5 @@
 - [BOJ - 2480 주사위세개](pythonspace/Solution2.ipynb)
 - [BOJ - 2484 주사위네개](pythonspace/Solution3.ipynb)
 - [Softeer - 전광판](pythonspace/Solution4.ipynb)
+- [Softeer - 택배 마스터 광우](pythonspace/Solution5.ipynb)
 ---
