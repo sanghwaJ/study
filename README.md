@@ -61,4 +61,5 @@
 - [Softeer - 택배 마스터 광우](pythonspace/Solution5.ipynb)
 - [Softeer - 회의실 예약 (1)](pythonspace/Solution6-1.ipynb)
 - [Softeer - 회의실 예약 (2)](pythonspace/Solution6-2.ipynb)
+- [Softeer - 지도 자동 구축](pythonspace/Solution7.ipynb)
 ---
