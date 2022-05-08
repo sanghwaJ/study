@@ -626,9 +626,19 @@ print(f'{f:.1f}') # 1.2
 print(f'{f:.2f}') # 1.23
 print(f'{f:.3f}') # 1.235 (1.2345에서 마지막 자리 반올림)
 print(f'{f:.4f}') # 1.2346 (1.23456에서 마지막 자리 반올림)
+
+# 4. f-string & list
+nums = [100, 200, 300]
+print(f'{nums[0]} + {nums[1]} + {nums[2]} = {nums[0]+nums[1]+nums[2]}') 
+# 100 + 200 + 300 = 600
+
+# 5. f-string & dictionary
+dics = {'name':'Elon Musk', 'gender':'man', 'age':50}
+print(f'name=>{dics["name"]}, gender=>{dics["gender"]}, age=>{dics["age"]}')
+# name=>Elon Musk, gender=>man, age=>50
 ```
 
-### 2. format
+### 2. format()
 
 ```python
 # 1. 기본사용
