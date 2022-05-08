@@ -62,4 +62,7 @@
 - [Softeer - 회의실 예약 (1)](pythonspace/Solution6-1.ipynb)
 - [Softeer - 회의실 예약 (2)](pythonspace/Solution6-2.ipynb)
 - [Softeer - 지도 자동 구축](pythonspace/Solution7.ipynb)
+- [Softeer - 성적평균](pythonspace/Solution8.ipynb)
+- [Softeer - 8단 변속기](pythonspace/Solution9.ipynb)
+- [Softeer - 장애물 인식 프로그램](pythonspace/Solution10.ipynb)
 ---
