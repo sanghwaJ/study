@@ -65,4 +65,5 @@
 - [Softeer - 성적평균](pythonspace/Solution8.ipynb)
 - [Softeer - 8단 변속기](pythonspace/Solution9.ipynb)
 - [Softeer - 장애물 인식 프로그램](pythonspace/Solution10.ipynb)
+- [Softeer - 비밀메뉴](pythonspace/Solution11.ipynb)
 ---
