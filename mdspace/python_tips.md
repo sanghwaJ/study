@@ -422,6 +422,7 @@ print(deque_list) # deque([0, 1])
 - queue with deque
   - appendleft() : 새로운 값을 왼쪽부터 입력
   - popleft() : 가장 먼저 들어간 값(왼쪽부터) pop
+  - queue 사용 조합 : appendleft() & pop() || append() & popleft()
 ```python
 from collections import deque
 
@@ -439,7 +440,7 @@ deque_list2.popleft() # 0
 deque_list2.popleft() # 1
 ```
 
-- reserved() : 기존과 반대로 데이터 저장
+- reversed() : 기존과 반대로 데이터 저장
 ```python
 from collections import deque
 
@@ -515,7 +516,7 @@ print(c["a"]) # 2
 S = 'ABCDE'
 
 print(S.find('A')) # 0
-print(S.index('A') # 0
+print(S.index('A')) # 0
 ```
 - 각 문자열이나 리스트의 인덱스를 저장하는 방식으로 find와 index 활용
 ```python
