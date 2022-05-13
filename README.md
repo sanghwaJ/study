@@ -15,7 +15,12 @@
 ### 📌 JavaScript
 ### 📌 Python
 ### 📌 Algorithm
-- [버블정렬 (Bubble Sort)](mdspace/bubbleSort.md)
+- [버블정렬 (Bubble Sort)](mdspace/algo_bubbleSort.md)
+- [선택정렬 (Selection Sort)](mdspace/algo_selectionSort.md)
+- [삽입정렬 (Insertion Sort)](mdspace/algo_insertionSort.md)
+- [재귀용법 (Recursive Call)](mdspace/algo_recursive.md)
+- [퀵정렬 (Quick Sort)](mdspace/algo_quickSort.md)
+
 ### 📌 기타
 - [프로그램, 프로세스, 스레드(멀티스레드, 싱글스레드)](mdspace/program,process,thread.md)
 - [라이브러리, 프레임워크, 아키텍처, API(+ RESTful API)](mdspace/libraryAndFrameworkAndEtc.md)

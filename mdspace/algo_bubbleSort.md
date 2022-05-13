@@ -19,6 +19,7 @@ for index in range(데이터길이 - 1):
 
 ```python
 # 버블정렬
+
 def bubblesort(data):
     for index1 in range(len(data) - 1):
         swap = False # swap이 일어나는지 안일어나는지 판단
