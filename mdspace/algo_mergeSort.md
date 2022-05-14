@@ -1,93 +1,123 @@
 # 병합정렬 (Merge Sort)
 
-## 1) 퀵정렬
-- 기준점(pivot)을 정해서, 기준점보다 작은 데이터는 왼쪽(left), 큰 데이터는 오른쪽(right)으로 모으는 정렬
-- 각 왼쪽(left), 오른쪽(right)은 재귀용법을 사용해서 다시 동일 함수를 호출하여 위 작업을 반복(남은 데이터가 1개가 될 때까지)
-- 함수는 left + pivot + right를 리턴
+## 1) 병합정렬
+- 재귀용법을 활용한 정렬 알고리즘
+- 리스트를 절반으로 잘라 비슷한 크기의 두 부분 리스트로 나눈 후, 각 부분 리스트를 재귀적으로 병합정렬을 이용해 정렬하고, 다시 두 부분 리스트를 다시 하나의 정렬된 리스트로 합친다.
 
-## 2) 퀵정렬 연습
+## 2) 병합정렬의 이해
 ```python
-# 프로그래밍 연습 1
-# 리스트를 리스트 슬라이싱을 이용하여 세개로 잘라, 각 리스트 변수에 넣고 출력
-
-list = [1, 2, 3, 4, 5]
-
-data1 = list[:2]
-data2 = list[2]
-data3 = list[3:]
-
-print(data1)
-print(data2)
-print(data3)
+* 데이터가 4개인 경우
+    * data_list = [1, 9, 3, 2]
+        * 먼저 [1, 9], [3, 2]로 나눈다.
+        * 앞부분을 [1], [9]로 나누고, 정렬해서 합친다. [1, 9]
+        * 뒷부분을 [3], [2]로 나누고, 정렬해서 합친다. [2, 3]
+        * 이제 [1, 9]와 [2, 3]을 합치면서
+            * 1 < 2, [1]
+            * 9 > 2, [1, 2]
+            * 9 > 3, [1, 2, 3]
+            * 맨마지막 남은 9를 맨 뒤에 추가. [1, 2, 3, 9]
+* 즉 데이터를 나누는 함수(split)와 데이터를 합치는 함수(merge) 2가지 함수가 필요하다.
 ```
+
+## 3) 병합정렬 슈도코드
+
 ```python
-# 프로그래밍 연습 2
-# 리스트에서 맨 앞의 데이터를 pivot 변수에 넣고, 
-# pivot 변수 값을 기준으로 작은 데이터는 left 변수에, 그렇지 않은 데이터는 right 변수에 넣기
+def split(list):
+    if len(list) <= 1: 
+        return list
+    left = list[:데이터 2등분]
+    right = list[데이터 2등분:]
+    return merge(split(left), split(right))
 
-list = [4, 1, 2, 5, 7]
-pivot = list[0]
-left = []
-right = []
-
-for i in range(1, len(list)):
-    if pivot > list[i]:
-        left.append(list[i])
+def merge(left, right):
+    if left[lp] < right[rp]:
+        list.append(left[lp])
+        lp += 1
     else:
-        right.append(list[i])
-
-print(left)
-print(right)
+        list.append(right[rp])
+        rp += 1
+    return list
 ```
 
-## 3) 퀵정렬 알고리즘 구현
-- 만약 리스트 갯수가 한 개이면 해당 리스트를 리턴
-- 그렇지 않으면, 리스트 맨 앞의 데이터를 pivot으로
-- left, right 리스트 변수를 만들고, 맨 앞의 데이터를 뺀 나머지 데이터를 pivot과 비교하여 left, right에 append
-- return quicksort(left) + [pivot] + quicksort(right)로 재귀 호출
+## 3) 병합정렬 알고리즘 구현
+
+### 3-1) mergesplit 함수
+- 만약 리스트 갯수가 한 개이면, 해당 값 리턴
+- 그렇지 않다면, 리스트를 앞과 뒤 두 개로 나누기
+- left = mergesplit(앞)
+- right = mergesplit(뒤)
+- merge(left, right)
+
+### 3-2) merge 함수
+- 리스트 변수 생성(sorted)
+- left_index, right_index = 0
+- while left_index < len(left) or right_index < len(right):
+- 만약 left_index나 right_index가 이미 left 또는 right 리스트를 다 순회했다면, 반대쪽의 데이터를 그대로 리스트에 넣고, 해당 인덱스 1 증가
+    ```python
+    if left[left_index] < right[right_index]:
+        sorted.append(left[left_index])
+        left_index += 1
+    else:
+        sorted.append(right[right_index])
+        right_index += 1
+    ```
 
 ```python
-# Quick Sort
+# 프로그래밍 연습 1 (split)
 
-def qsort(data):
+def split(data):
+    medium = int(len(data) / 2)
+    left = data[:medium]
+    right = data[medium:]
+    print(left, right)
+
+data_list = [3,4,2,1,5]
+split(data_list)
+```
+
+```python
+# mergesplit
+def mergesplit(data):
     if len(data) <= 1:
         return data
+    medium = int(len(data) / 2)
+    left = mergesplit(data[:medium])
+    right = mergesplit(data[medium:])
+    return merge(left, right)       
 
-    left = []
-    right = []
-    pivot = data[0]
+# merge
+def merge(left, right):
+    merged = list()
+    left_point, right_point = 0, 0
 
-    for i in range(1, len(data)):
-        if pivot > data[i]:
-            left.append(data[i])
+    # case 1 : left와 right가 둘 다 남아 있을 때
+    while left_point < len(left) and right_point < len(right):
+        if left[left_point] < right[right_point]:
+            merged.append(left[left_point])
+            left_point += 1
         else:
-            right.append(data[i])
+            merged.append(right[right_point])
+            right_point += 1
 
-    return qsort(left) + [pivot] + qsort(right)
+    # case 2 : left만 남아있을 때
+    while left_point < len(left):
+        merged.append(left[left_point])
+        left_point += 1
 
-# qsort test
+    # case 3 : right만 남아있을 때
+    while right_point < len(right):
+        merged.append(right[right_point])
+        right_point += 1
+
+    return merged
+
+# 병합정렬 코드 TEST
 import random
-
 data_list = random.sample(range(100), 10)
-
-qsort(data_list)
+mergesplit(data_list)
 ```
 
-```python
-# Quick Sort (using list comprehension)
-
-def qsort(data):
-    if len(data) <= 1:
-        return data
-
-    pivot = data[0]
-
-    left = [item for item in data[1:] if pivot > item]
-    right = [item for item in data[1:] if pivot <= item]
-
-    return qsort(left) + [pivot] + qsort(right)
-```
-
-## 4) 퀵정렬 알고리즘 분석
-- 시간복잡도(평균, 최선) : $O(nlogn)$
-- 시간복잡도(최악) : $O(n^2)$
+## 4) 병합정렬 알고리즘 분석
+- 각 단계의 시간 복잡도 : $2^i * n/2^i = O(n)$
+- 만들어지는 각 단계의 갯수 : $O(logn)$
+- 따라서 시간복잡도는, $O(n) * O(logn) = O(nlogn)$
