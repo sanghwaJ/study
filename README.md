@@ -14,6 +14,7 @@
 - [Java - Getter & Setter](mdspace/java_getterAndSetter.md)
 ### 📌 JavaScript
 ### 📌 Python
+### 📌 Data Structure
 ### 📌 Algorithm
 - [재귀용법 (Recursive Call)](mdspace/algo_recursive.md)
 - [버블정렬 (Bubble Sort)](mdspace/algo_bubbleSort.md)
@@ -22,7 +23,9 @@
 - [퀵정렬 (Quick Sort)](mdspace/algo_quickSort.md)
 - [병합정렬 (Merge Sort)](mdspace/algo_mergeSort.md)
 - [이진탐색 (Binary Search)](mdspace/algo_binarySearch.md)
-
+- [순차탐색 (Sequential Search)](mdspace/algo_seqSearch.md)
+- [그래프 (Graph)](mdspace/algo_graph.md)
+- [너비 우선 탐색 (BFS) & 깊이 우선 탐색 (DFS)](mdspace/algo_bfsDfs.md)
 ### 📌 기타
 - [프로그램, 프로세스, 스레드(멀티스레드, 싱글스레드)](mdspace/program,process,thread.md)
 - [라이브러리, 프레임워크, 아키텍처, API(+ RESTful API)](mdspace/libraryAndFrameworkAndEtc.md)
