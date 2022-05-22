@@ -12,6 +12,7 @@
 - [Java - 메소드의 구분](mdspace/java_method.md)
 - [Java - 싱글톤 패턴](mdspace/java_singleton.md)
 - [Java - Getter & Setter](mdspace/java_getterAndSetter.md)
+- [Java - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
 ### 📌 JavaScript
 ### 📌 Python
 ### 📌 Data Structure
