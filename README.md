@@ -8,6 +8,7 @@
 - [Java - 상속](mdspace/java_inheritance.md)
 - [Java - 추상화(Abstraction)와 다형성(Polymorphism)](mdspace/java_AbstractionAndPolymorphism.md)
 - [Java - Overloading & Overriding](mdspace/java_overloadingAndOverriding.md)
+- [Java - 캡슐화와 접근제한자](mdspace/java_capsule.md)
 - [Java - Garbage Collection](mdspace/java_gc.md)
 - [Java - 메소드의 구분](mdspace/java_method.md)
 - [Java - 싱글톤 패턴](mdspace/java_singleton.md)
