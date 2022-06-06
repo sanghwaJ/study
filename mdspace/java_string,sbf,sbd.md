@@ -1,4 +1,3 @@
-
 # Java - String & StringBuffer & StringBuilder
 
 <p align="center"><img src="../imagespace/javatips3.jpg"></p>
