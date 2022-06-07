@@ -29,7 +29,7 @@ URLConnection urlCon = url.openConnection();
 HttpURLConnection httpCon = (HttpURLConnection) url.openConnection();
 ```
 
-### 3-3. URLConnection 구성 (메소드)
+### 2-3. URLConnection 구성 (메소드)
 - setConnectTimeout (int timeout) 
   - 연결 타임아웃 값 설정(단위 : 밀리초)
   - java.net.SocketTimeoutException는 연결이 설정되기 전에 제한 시간이 만료되면 발생
@@ -72,7 +72,7 @@ HttpURLConnection httpCon = (HttpURLConnection) url.openConnection();
 - setInstanceFollowRedirects (boolean follow)
   - HTTP 리다이렉션 뒤에 이 HttpURLConnection 클래스의 인스턴스가 자동으로 따라와야 하는지 여부를 설정 (기본값 true)
 
-### 3-4. 헤더 필드 읽기
+### 2-4. 헤더 필드 읽기
 - 연결이 이루어지면 서버는 URL 요청을 처리하고 메타데이터와 실제 콘텐츠로 구성된 응답을 다시 보내는데, 이때 메타데이터는 헤더 필드라고 하는 key=value의 모음
 - 헤더 필드는 서버에 대한 정보, 상태 코드, 프로토콜 정보를 나타내며, 실제 내용은 텍스트, HTML, 이미지 등이 될 수 있음
 - getHeaderFields ()
@@ -108,7 +108,7 @@ HttpURLConnection httpCon = (HttpURLConnection) url.openConnection();
 - getResponseCode ()
   - 서버에서 보낸 HTTP 상태 코드를 반환
 
-### 3-5. 입력 스트림 가져오기 및 데이터 읽기
+### 2-5. 입력 스트림 가져오기 및 데이터 읽기
 - 실제 내용을 읽으려면 연결에서 InputStream 인스턴스를 얻은 다음, InputStream의 read() 메소드를 통해 데이터를 읽어야 함
 ```java
 InputStream inputStream = urlCon.getInputStream();
@@ -131,7 +131,7 @@ BufferedReader reader = new BufferedReader(new InputStreamReader(input));
 String line = reader.readLine(); // reads a line
 ```
 
-### 3-6. 출력 스트림 가져오기 및 데이터 쓰기
+### 2-6. 출력 스트림 가져오기 및 데이터 쓰기
 - 서버에 데이터를 보내려면, 먼저 연결에서 출력을 활성화해야 함
 ```java
 urlCon.setDoOutput(true);
@@ -158,5 +158,5 @@ String line = "This is String";
 writer.print(line);
 ```
 
-### 3-7. 연결 종료
+### 2-7. 연결 종료
 - close() 메소드를 호출하고, URLConnection 인스턴스와 연결된 네트워크 리소스를 해제
