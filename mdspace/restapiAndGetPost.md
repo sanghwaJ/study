@@ -4,6 +4,9 @@
 - 클라이언트가 웹 서버에게 사용자의 목적이나 종류를 알리는 수단
 
 ### 1-1. HTTP Method 종류와 특징
+
+<p align="center"><img src="../imagespace/httpMethod.png"></p>
+
 1. GET : 리소스 조회, 서버에 전달하고 싶은 데이터는 query를 통해 전달
 2. POST : 요청 데이터 처리와 데이터 등록에 사용하며, 주로 신규 리소스를 등록하거나 프로세스 처리에 사용
 3. PUT : 리소스를 대체, 해당 리소스가 없으면 생성
@@ -24,8 +27,6 @@
 3. 캐시가능 (Cacheable Methods)
    - 캐싱을 해서 데이터를 효율적으로 가져올 수 있음
    - GET, HEAD, POST, PATCH가 캐시가 가능하지만, 주로 GET, HEAD만 쓰임
-
-<p align="center"><img src="../imagespace/httpMethod.png"></p>
 
 ### 1-3. HTTP 상태코드
 - 클라이언트가 보낸 요청의 처리 상태를 응답에서 알려주는 기능
