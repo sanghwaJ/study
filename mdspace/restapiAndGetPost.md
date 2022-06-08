@@ -4,9 +4,6 @@
 - 클라이언트가 웹 서버에게 사용자의 목적이나 종류를 알리는 수단
 
 ### 1-1. HTTP Method 종류와 특징
-
-<p align="center"><img src="../imagespace/httpMethod.png"></p>
-
 1. GET : 리소스 조회, 서버에 전달하고 싶은 데이터는 query를 통해 전달
 2. POST : 요청 데이터 처리와 데이터 등록에 사용하며, 주로 신규 리소스를 등록하거나 프로세스 처리에 사용
 3. PUT : 리소스를 대체, 해당 리소스가 없으면 생성
@@ -15,7 +12,9 @@
 6. HEAD : GET과 동일하지만, 메시지 부분을 제외하고 상태줄과 헤더만 반환
 7. OPTIONS : 대상 리소스에 대한 통신 가능 옵션을 설명 (주로 CORS에서 사용)
 8. CONNECT : 대상 자원으로 식별되는 서버에 대한 터널을 설정
-9. TRACE : 대상 리소스에 대한 경로를 따라 메시지 루프백 테스트를 진행
+9. TRACE : 대상 리소스에 대한 경로를 따라 메시지 루프백 테스트를 진행\
+    
+<p align="center"><img src="../imagespace/httpMethod.png"></p>
 
 ### 1-2. HTTP 메소드의 속성
 1. 안전 (Safe Methods)
