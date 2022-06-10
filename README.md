@@ -8,7 +8,6 @@
 - [Java - 상속](mdspace/java_inheritance.md)
 - [Java - 추상화(Abstraction)와 다형성(Polymorphism)](mdspace/java_AbstractionAndPolymorphism.md)
 - [Java - 캡슐화와 접근제한자](mdspace/java_capsule.md)
-- [Java - Static & Instance](mdspace/java_staticAndInstance.md)
 - [Java - Overloading & Overriding](mdspace/java_overloadingAndOverriding.md)
 - [Java - Garbage Collection](mdspace/java_gc.md)
 - [Java - 메소드의 구분](mdspace/java_method.md)
@@ -58,6 +57,7 @@
 - [Java - 예외처리 (throw / try / catch / finally)](mdspace/java_exception.md)
 - [Java - this](mdspace/java_this.md)
 - [Java - Map (HashMap, TreeMap, LinkedHashMap)](mdspace/java_map.md)
+- [Java - Static & Instance](mdspace/java_staticAndInstance.md)
 
 ### 📌 JavaScript
 - [JavaScript - 실행 모델 (Event Loop, Call Stack, Run-to-completion, Callback Queue, Offloading)](mdspace/js_basic1.md)
