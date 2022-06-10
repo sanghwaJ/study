@@ -23,8 +23,6 @@
 
 ### 📌 Python
 
-### 📌 Data Structure
-
 ### 📌 Algorithm
 - [재귀용법 (Recursive Call)](mdspace/algo_recursive.md)
 - [버블정렬 (Bubble Sort)](mdspace/algo_bubbleSort.md)
@@ -45,6 +43,13 @@
 - [Git Branch 전략](mdspace/gitBranch.md)
 - [Container & Docker](mdspace/docker.md)
 - [Cookie & Session (+ Cache)](mdspace/cookieAndSession.md)
+
+---
+
+## 🗄 Infra
+### 📌 Linux
+### 📌 Database
+- [Query 최적화](mdspace/query.md)
 
 ---
 ## 💻 Language
@@ -69,11 +74,9 @@
 
 ### 📌 Swift
 ### 📌 Node.js
+
 ---
-## 🗄 Infra
-### 📌 Linux
-### 📌 Database
----
+
 ## 👨‍💻 Algorithm
 ### 📌 Java
 - [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
