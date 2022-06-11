@@ -47,9 +47,10 @@
 ---
 
 ## 🗄 Infra
-### 📌 Linux
+
 ### 📌 Database
 - [Query 최적화](mdspace/query.md)
+### 📌 Linux
 
 ---
 ## 💻 Language
