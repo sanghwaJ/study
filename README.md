@@ -10,7 +10,6 @@
 - [Java - 캡슐화와 접근제한자](mdspace/java_capsule.md)
 - [Java - Overloading & Overriding](mdspace/java_overloadingAndOverriding.md)
 - [Java - Garbage Collection](mdspace/java_gc.md)
-- [Java - 메소드의 구분](mdspace/java_method.md)
 - [Java - 싱글톤 패턴](mdspace/java_singleton.md)
 - [Java - DTO & VO](mdspace/java_dtoAndVo.md)
 - [Java - Getter & Setter](mdspace/java_getterAndSetter.md)
@@ -63,6 +62,7 @@
 - [Java - 예외처리 (throw / try / catch / finally)](mdspace/java_exception.md)
 - [Java - this](mdspace/java_this.md)
 - [Java - Map (HashMap, TreeMap, LinkedHashMap)](mdspace/java_map.md)
+- [Java - 메소드의 구분](mdspace/java_method.md)
 - [Java - Static & Instance](mdspace/java_staticAndInstance.md)
 
 ### 📌 JavaScript
