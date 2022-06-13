@@ -73,7 +73,6 @@
 ### 📌 Python
 - [Python Tips](mdspace/python_tips.md)
 
-### 📌 Swift
 ### 📌 Node.js
 
 ---
