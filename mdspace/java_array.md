@@ -76,7 +76,7 @@ list = new LinkedList<Integer>();
 <br/>
 
 ## 4. 다차원 배열
-### 4-1. 2치원 배열
+### 4-1. 2차원 배열
 ```java
 Integer list[][] = {{1, 2, 3}, {4, 5, 6}};
 

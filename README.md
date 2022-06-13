@@ -58,6 +58,7 @@
 - [Java - 배열(Array)](mdspace/java_array.md) 
 - [Java - Queue & Stack](mdspace/java_queueAndStack.md)
 - [Java - String & StringBuffer & StringBuilder](mdspace/java_string,sbf,sbd.md)
+- [Java - split() & StringTokenizer](mdspace/java_splitAndStringTokenizer.md)
 - [Java - 정규표현식 (Pattern & Matcher)](mdspace/java_regex.md)
 - [Java - 예외처리 (throw / try / catch / finally)](mdspace/java_exception.md)
 - [Java - this](mdspace/java_this.md)
