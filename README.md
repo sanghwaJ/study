@@ -55,8 +55,6 @@
 ## 💻 Language
 ### 📌 Java
 - [Java Tips](mdspace/java_tips.md)
-- [Java - 배열(Array)](mdspace/java_array.md) 
-- [Java - Queue & Stack](mdspace/java_queueAndStack.md)
 - [Java - Static & Instance](mdspace/java_staticAndInstance.md)
 - [Java - 메소드의 구분](mdspace/java_method.md)
 - [Java - Map (HashMap, TreeMap, LinkedHashMap)](mdspace/java_map.md)
@@ -66,6 +64,8 @@
 - [Java - split() & StringTokenizer](mdspace/java_splitAndStringTokenizer.md)
 - [Java - 정규표현식 (Pattern & Matcher)](mdspace/java_regex.md)
 - [Java - Excel Download (Apache POI)](mdspace/java_excel.md)
+- [Java - 배열(Array)](mdspace/java_array.md) 
+- [Java - Queue & Stack](mdspace/java_queueAndStack.md)
 
 ### 📌 JavaScript
 - [JavaScript - 실행 모델 (Event Loop, Call Stack, Run-to-completion, Callback Queue, Offloading)](mdspace/js_basic1.md)
