@@ -1,6 +1,7 @@
 # study
 
 ## 📚 Computer Science
+
 ### 📌 Java
 - [Java - JVM(Java Virtual Machine) & Java 컴파일](mdspace/java_jvm.md)
 - [Java - Casting(업캐스팅, 다운캐스팅)](mdspace/java_casting.md)
@@ -49,10 +50,13 @@
 
 ### 📌 Database
 - [Query 최적화](mdspace/query.md)
+
 ### 📌 Linux
 
 ---
+
 ## 💻 Language
+
 ### 📌 Java
 - [Java Tips](mdspace/java_tips.md)
 - [Java - Static & Instance](mdspace/java_staticAndInstance.md)
@@ -80,6 +84,7 @@
 ---
 
 ## 👨‍💻 Algorithm
+
 ### 📌 Java
 - [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
 - [프로그래머스 - 네트워크](javaspace/Solution2.java)
@@ -88,6 +93,7 @@
 - [프로그래머스 - 전화번호 목록](javaspace/Solution5.java)
 - [BOJ - 2480 주사위세개](javaspace/Solution6.java)
 - [BOJ - 2484 주사위네개](javaspace/Solution7.java)
+
 ### 📌 Python
 - [프로그래머스 - 전화번호 목록](pythonspace/Solution1.ipynb)
 - [프로그래머스 - 카펫](pythonspace/Solution13.ipynb)
@@ -102,4 +108,5 @@
 - [Softeer - 8단 변속기](pythonspace/Solution9.ipynb)
 - [Softeer - 장애물 인식 프로그램](pythonspace/Solution10.ipynb)
 - [Softeer - 비밀메뉴](pythonspace/Solution11.ipynb)
+
 ---
