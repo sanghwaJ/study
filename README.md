@@ -20,6 +20,9 @@
 - [Java - HttpServletRequest & HttpServletResponse](mdspace/java_httpServlet.md)
 
 ### 📌 JavaScript
+- [JavaScript - 실행 모델 (Event Loop, Call Stack, Run-to-completion, Callback Queue, Offloading)](mdspace/js_basic1.md)
+- [JavaScript - Hoisting, Scope, Closure](mdspace/js_basic2.md)
+- [JavaScript - Prototype, Class](mdspace/js_basic3.md)
 
 ### 📌 Python
 
@@ -72,9 +75,6 @@
 - [Java - Queue & Stack](mdspace/java_queueAndStack.md)
 
 ### 📌 JavaScript
-- [JavaScript - 실행 모델 (Event Loop, Call Stack, Run-to-completion, Callback Queue, Offloading)](mdspace/js_basic1.md)
-- [JavaScript - Hoisting, Scope, Closure](mdspace/js_basic2.md)
-- [JavaScript - Prototype, Class](mdspace/js_basic3.md)
 
 ### 📌 Python
 - [Python Tips](mdspace/python_tips.md)
