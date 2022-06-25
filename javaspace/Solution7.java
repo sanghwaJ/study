@@ -5,18 +5,26 @@ import java.io.*;
 
 public class Solution7 {
     public static void main(String[] args) {
-        /*
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        //BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.in));
+        Scanner sc = new Scanner(System.in);
+        Integer a = sc.nextInt();
+        Integer b = sc.nextInt();
+        Integer c = sc.nextInt();
+        Integer d = sc.nextInt();
 
-        Integer N = Integer.parseInt(br.readLine());
+        solution(a, b, c, d);
 
-        for(int i = 0; i < N; i++) {
-            String[] arr = br.readLine().split(" ");
-        }
-
-        br.close();
-        //bw.close();    
-        */
+        sc.close(); 
     }
+
+    public static void solution(Integer a, Integer b, Integer c, Integer d) {
+        if(a == b && a == c && b == c) {
+            System.out.print(10000+(a*1000));
+        } else if(a == b || a == c) {
+            System.out.print(1000+(a*100));
+        } else if(b == c) {
+            System.out.print(1000+(b*100));
+        } else {
+            System.out.print((Math.max(a, Math.max(b, c))*100));
+        }
+    }   
 }
