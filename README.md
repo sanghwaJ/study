@@ -19,7 +19,7 @@
 - [Java - URL Connection & Http URL Connection](mdspace/java_urlConnection.md)
 - [Java - HttpServletRequest & HttpServletResponse](mdspace/java_httpServlet.md)
 
-### 📌 JavaScript
+### 📌 JavaScript & HTML
 - [JavaScript - 실행 모델 (Event Loop, Call Stack, Run-to-completion, Callback Queue, Offloading)](mdspace/js_basic1.md)
 - [JavaScript - Hoisting, Scope, Closure](mdspace/js_basic2.md)
 - [JavaScript - Prototype, Class](mdspace/js_basic3.md)
@@ -74,7 +74,9 @@
 - [Java - 배열(Array)](mdspace/java_array.md) 
 - [Java - Queue & Stack](mdspace/java_queueAndStack.md)
 
-### 📌 JavaScript
+### 📌 JavaScript & HTML
+- [JavaScript - return](mdspace/js_return.md)
+- [HTML - 이벤트 Tag](mdspace/html_event.md)
 
 ### 📌 Python
 - [Python Tips](mdspace/python_tips.md)
