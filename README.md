@@ -49,15 +49,6 @@
 
 ---
 
-## 🗄 Infra
-
-### 📌 Linux
-
-### 📌 Database
-- [Query 최적화](mdspace/query.md)
-
----
-
 ## 💻 Language
 
 ### 📌 Java
@@ -82,6 +73,15 @@
 - [Python Tips](mdspace/python_tips.md)
 
 ### 📌 Node.js
+
+---
+
+## 🗄 Infra
+
+### 📌 Linux
+
+### 📌 Database
+- [Query 최적화](mdspace/query.md)
 
 ---
 
