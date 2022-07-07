@@ -44,7 +44,6 @@
 - [라이브러리, 프레임워크, 아키텍처, API](mdspace/libraryAndFrameworkAndEtc.md)
 - [GET & POST, RESTful API](mdspace/restapiAndGetPost.md)
 - [Git Branch 전략](mdspace/gitBranch.md)
-- [Container & Docker](mdspace/docker.md)
 - [Cookie & Session (+ Cache)](mdspace/cookieAndSession.md)
 
 ---
@@ -52,8 +51,10 @@
 
 ## 🗄 Infra
 
-### 📌 Linux
-
+### 📌 Server
+- [Container & Docker](mdspace/docker.md)
+- [Kubernates (vs Docker)](mdspace/kubernates.md)
+  
 ### 📌 Database
 - [Query 최적화](mdspace/query.md)
 
