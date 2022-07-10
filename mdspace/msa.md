@@ -1,6 +1,6 @@
 # MSA (Micro Service Architecture)
 
-## 1. MAS란?
+## 1. MSA란?
 
 <p align="center"><img src="../imagespace/msa2.jpg"></p>
 
