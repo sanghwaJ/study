@@ -66,6 +66,8 @@
   - 또 다른 형태의 Shard로, Node를 손실했을 경우 데이터의 신뢰성을 위해 Shard를 복제하는 것
   - 따라서 Replica는 서로 다른 Node에 존재하는 것이 권장됨
 
+<br/>
+
 ## 5. Elasticsearch의 특징
 
 ### 5-1. Scale-Out
@@ -80,6 +82,8 @@
 ### 5-4. Restful
 - CRUD 작업은 HTTP Restful API를 통해 수행
     <p align="center"><img src="../imagespace/elastic4.jpg"></p>
+
+<br/>
 
 ## 6. Elasticsearch 예제
 
