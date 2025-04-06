@@ -5,7 +5,22 @@
 ### Transaction이란?
 - 데이터베이스의 상태를 변화시키기 위해 수행하는 작업의 단위
 
-### JPA Dirty Checking
+### JPA Dirty Checking & @Transactional
+- JPA는 Dirty Checking을 통해 엔티티 상태의 변경을 감지하며, 트랜잭션이 끝나는 시점에 변경된 엔티티들을 DB에 자동으로 반영해주어 별도의 update save 메소드가 필요 없음
+- Dirty Checking은 트랜잭션이 커밋될 때, 즉 @Transactional 어노테이션이 끝나는 시점에 적용됨
+
+### @Transactional 롤백
+- 연관관계에 의해 여러 엔티티들을 save 혹은 update를 해주는 경우, 트랜잭션이 성공적으로 완료되면 전체가 반영이 되거나, 실패하면 전체를 취소시켜 이전 상황으로 롤백을 해주어야 함
+- @Transactional을 사용한 트랜잭션에서 예외가 발생하는 경우, 런타임 예외인 경우에는 자동적으로 롤백이 발생하지만, 아닌 경우에는 롤백이 되지 않기 때문에, 이러한 경우에는 rollbackFor 옵션을 사용해주어야 함
+```java
+@Transactional(rollbackFor=CustomException.class)
+public void updateuser(UserDTO dto) throws CustomException {
+	// 로직 구현
+}
+```
+
+### @Transactional의 활용법과 사용 위치
+- 
 
 ## 2. @Transactional 사용 시 주의 사항
 
