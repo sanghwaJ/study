@@ -27,6 +27,10 @@ public void updateuser(UserDTO dto) throws CustomException {
 }
 ```
 
+### @Transactional의 사용
+- @Transactional을 Service 레이어에만 적용하면 Repository 레이어에서 굳이 추가할 필요가 없음
+- 다만, 쿼리 단위로 트랜잭션 처리가 필요한 경우 Repository 레이어에서 @Transactional을 사용할 수도 있음
+
 ### @Transactional(readOnly=true) 사용
 - Create, Update, Delete 작업이 동작하지 않아 조회한 데이터를 의도치 않게 변경되는 일을 예방하며, 스냅샷 저장이나 Dirty Checking을 하지 않아 성능이 향상됨
 - DB가 Master-Slave 구성으로 되어있다면, 읽기 전용으로 Slave를 호출하여 상황에 따라 DB 서버의 부하를 줄이고 최적화를 할 수 있음
@@ -171,7 +175,7 @@ class PackingApiService() {
 - @Modifying으로 벌크 연산을 수행하면, 영속성 컨텍스트를 무시하고 쿼리를 실행하기 때문에 DB와 데이터 싱크가 맞지 않는 문제가 발생함
 - 따라서, 벌크 연산으로 변경된 데이터를 사용하기 전에 clearAutomatically=true 옵션을 통해 영속성 컨텍스트를 초기화 해주는 작업이 필요함
   - 이런 경우 해당 데이터의 조회를 실행하면, 영속성 컨텍스트에 해당 엔티티가 존재하지 않기 때문에 DB를 조회하게되며, 데이터 싱크가 안맞는 문제를 해결할 수 있음
-- @Modifying 어노테이션은 기본적으로 @Transactional과 함께 사용되는데, 변경 작업은 트랜잭션 내에서 실행되어야 하고, 완료되지 않은 변경 작업이 의도하지 않은 영향을 줄 수 있기 때문
+- Repository 레이어의 @Modifying 어노테이션은 기본적으로 Service 레이어의 @Transactional과 함께 사용되는데, 변경 작업은 트랜잭션 내에서 실행되어야 하고, 완료되지 않은 변경 작업이 의도하지 않은 영향을 줄 수 있기 때문
 
 ### 참고
 - https://resilient-923.tistory.com/415
