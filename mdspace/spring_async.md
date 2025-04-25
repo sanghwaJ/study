@@ -186,6 +186,83 @@ public class AsyncConfig implements AsyncConfigurer {
 
 ## 4. Thread Pool 설정 최적화
 
+### Thread Pool의 사용 목적
+- Thread 자체가 리소스이기 때문에, 어떤 작업을 위해 Thread를 무차별적으로 생성하게 되면, CPU 자원을 무차별적으로 낭비하게 되는 것이며, 이는 성능에 영향을 끼치게 됨
+- 따라서, Thread를 미리 만들어두고 재활용하자는 것이 Thread Pool의 사용 목적
+- Thread Pool의 동작 방식
+    - 병렬 작업의 형태로 동시 코드를 작성
+    - 실행을 위해 Thread Pool의 인스턴스에 제출
+    - 제출한 인스턴스에서 실행하기 위해 재사용되는 여러 Thread를 제어
+- 즉, Thread Pool 환경 설정의 중요성은 메모리 낭비를 하지 않기 위함임
+
+### ThreadPoolExecutor의 동작 방식
+
+<p align="center"><img src="../imagespace/spring_async3.png" height=300></p>
+
+- ThreadPoolExecutor 옵션
+    - corePoolSize : ThreadPoolExecutor가 동시에 수행할 수 있는 Thread 수 지정
+    - maximumPoolSize : ThreadPoolExecutor가 최대 수행할 수 있는 Thread 수 지정
+    - keepAliveTime : corePoolSize 보다 더 많은 Thread가 생성될 경우, 추가된 Thread를 정리(제거)하기 위한 대기 시간
+    - TimeUnit : keepAliveTime 옵션값을 위한 시간 단위(Second, millisecond등)
+    - workQueue : ThreadPoolExecutor의 실행가능한 Thread Pool이 없을 경우 Thread를 대기하기 위한 Queue 지정
+- ThreadPoolExecutor 옵션에 따른 동작
+    - Thread Pool에서 Thread를 생성할 때, corePoolSize만큼의 Core Thread를 생성
+    - 새로운 작업이 들어올 때, 모든 Core Thread가 사용중이고, 내부 Queue가 가득차면 Thread Pool의 최대 크기가 maximumPoolSize 만큼 커질 수 있음
+    - 만약 현재 Thread Pool이 corePoolSize보다 많은 Thread를 가지고 있다면, 초과한 Thread에 대해 keepAliveTime보다 더 오랫동안 할 일이 없으면 Thread가 제거됨
+
+### Thread Pool 작업 요청 방식
+- execute() : 작업 처리 중에 예외가 발생하면 해당 Thread가 종료되고 Thread Pool에서 제거한 뒤, 새로운 Thread를 생성하여 다른 작업을 처리하며, 처리 결과를 반환하지 않음
+- submit() : 작업 처리 중에 예외가 발생하더라도 Thread가 종료되지 않고 다음 작업에 사용되며, 처리 결과를 Future<?>로 반환하기 때문에 submit을 사용하는 것이 더 바람직함
+
+### corePoolSize & maxPoolSize & queueCapacity의 관계
+
+<p align="center"><img src="../imagespace/spring_async4.png" height=350></p>
+
+1. workQueue에 Thread 대기
+2. 현재 수행 중인 Thread가 끝나면, workQueue 로부터 대기 중인 Thread를 Thread Pool로 옮김
+3. Thread Pool의 Thread 들이 corePoolSize만큼 실행
+4. ThreadPoolExecutor는 기본적으로 corePoolSize만큼의 Thread가 수행중이라면, 추가적인 요청에 대한 처리 Thread는 Queuing 처리함
+5. Queue가 다 차면, 그제서야 maxPoolSize 옵션이 적용됨
+    - corePoolSize보다 적은 Thread가 수행되고 있었던 경우, 실행 요청한 Runnable을 수행하기 위한 Thread를 새로 생성하여 즉시 실행
+    - corePoolSize보다 많은 Thread가 수행되고 있지만, maxPoolSize보다 적은 수의 Thread가 수행되고 있는 경우
+        - Queue가 가득 차지 않은 경우, 즉시 실행하지 않고 Queue에 Runnable을 넣음
+        - Queue가 가득 찬 경우, maxPoolSize까지 Thread를 더 만들어 실행
+
+### 결론
+1. Thread Pool의 작동방식은 corePoolSize 만큼 실행하다가, Work Queue에 task를 대기하고, work Queue가 가득참에 따라 thread pool이 maxPoolSize 만큼 늘어나는 구조로 동작
+2. corePoolSize에 대해서는 "CPU CORE 수 * CPU 사용률 * (1 + I/O 입력시간 대기효율)" 공식을 사용
+    - I/O 입력시간 대기효율 : 대기 시간과 서비스 시간의 비율로, Thread가 계산을 수행하는데 시간 대비 I/O 작업이 완료될 때까지 대기 시간을 뜻함 (wait time / service time)
+    ```java
+    /**
+    CPU 코어수 * CPU 사용률 * (1 + I/O입력시간대기효율)
+    */
+    @Override
+    @Bean(name = "tossPaymentsExecutor")
+    public Executor getAsyncExecutor() {
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        int numOfCores = Runtime.getRuntime().availableProcessors();
+        float targetCpuUtilization = 0.3f;
+        float blockingCoefficient = 0.1f;
+        int corePoolSize = (int) (numOfCores * targetCpuUtilization * (1 + blockingCoefficient));
+        executor.setCorePoolSize(corePoolSize);
+        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
+        executor.setThreadNamePrefix("custom-async-tosspay"); // Set the thread name prefix
+        executor.initialize();
+        return executor;
+    }
+    ```
+3. db connection pool에 대해서는 "(CPU CORE 수 * 2) + DB 서버가 관리할 수 있는 동시 I/O 요청 수" 공식을 사용
+    - CPU CORE 수 * 2 : 컨텍스트 스위칭으로 인한 오버헤드를 고려하더라도 DB의 Disk I/O나 DRAM이 처리하는 속도가 CPU 속도가 월등히 빠르기 때문에, DB 작업을 하며 Blocking되는 시간에 Thread가 작업을 처리할 수 있는 여유를 두기 위함임
+    - 동시 I/O 요청 수 : 하드 디스크 하나는 spindle을 하나 가지게 되는데, 이 spindle의 수는 DB 서버가 관리 할 수 있는 동시 I/O 요청 수를 뜻함 (디스크가 16개인 경우, 동시 I/O 요청 수는 16개)
+    ```plain text
+    connections = ((core_count * 2) + effective_spindle_count)
+    ```
+4. 웬만하면 queueCapacity와 maxPoolSize는 성능 이슈와 사용자의 요청 수를 예측할 수 없기 때문에 default로 두는 것이 좋음
+5. 예외 처리는 AsyncUncaughtExceptionHandler을 통해 진행
+
+
+
 ### 참고
 - https://xxeol.tistory.com/44
 - https://velog.io/@think2wice/Spring-Async-Thread-Pool%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-Async
+- https://velog.io/@vanillacake369/Async-Size-%EC%84%A4%EC%A0%95-%EA%B8%B0%EC%A4%80%EC%97%90-%EB%8C%80%ED%95%B4-%EA%B3%A0%EB%AF%BC%ED%95%B4%EB%B3%B4%EC%9E%90-feat.ThreadPoolQueue
