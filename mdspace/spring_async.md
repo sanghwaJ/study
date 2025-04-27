@@ -229,8 +229,8 @@ public class AsyncConfig implements AsyncConfigurer {
         - Queue가 가득 찬 경우, maxPoolSize까지 Thread를 더 만들어 실행
 
 ### 결론
-1. Thread Pool의 작동방식은 corePoolSize 만큼 실행하다가, Work Queue에 task를 대기하고, work Queue가 가득참에 따라 thread pool이 maxPoolSize 만큼 늘어나는 구조로 동작
-2. corePoolSize에 대해서는 "CPU CORE 수 * CPU 사용률 * (1 + I/O 입력시간 대기효율)" 공식을 사용
+1. Thread Pool의 작동방식은 corePoolSize 만큼 실행하다가, Work Queue에 task를 대기하고, Work Queue가 가득참에 따라 Thread Pool이 maxPoolSize 만큼 늘어나는 구조로 동작
+2. corePoolSize에 대해서는 [CPU CORE 수 * CPU 사용률 * (1 + I/O 입력시간 대기효율)] 공식을 사용
     - I/O 입력시간 대기효율 : 대기 시간과 서비스 시간의 비율로, Thread가 계산을 수행하는데 시간 대비 I/O 작업이 완료될 때까지 대기 시간을 뜻함 (wait time / service time)
     ```java
     /**
@@ -251,7 +251,7 @@ public class AsyncConfig implements AsyncConfigurer {
         return executor;
     }
     ```
-3. db connection pool에 대해서는 "(CPU CORE 수 * 2) + DB 서버가 관리할 수 있는 동시 I/O 요청 수" 공식을 사용
+3. db connection pool에 대해서는 [(CPU CORE 수 * 2) + DB 서버가 관리할 수 있는 동시 I/O 요청 수] 공식을 사용
     - CPU CORE 수 * 2 : 컨텍스트 스위칭으로 인한 오버헤드를 고려하더라도 DB의 Disk I/O나 DRAM이 처리하는 속도가 CPU 속도가 월등히 빠르기 때문에, DB 작업을 하며 Blocking되는 시간에 Thread가 작업을 처리할 수 있는 여유를 두기 위함임
     - 동시 I/O 요청 수 : 하드 디스크 하나는 spindle을 하나 가지게 되는데, 이 spindle의 수는 DB 서버가 관리 할 수 있는 동시 I/O 요청 수를 뜻함 (디스크가 16개인 경우, 동시 I/O 요청 수는 16개)
     ```plain text
