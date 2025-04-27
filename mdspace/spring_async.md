@@ -109,7 +109,7 @@ public class AsyncService {
     - 예상 최대 동시 작업 수에 가까운 값으로 설정하는 것이 좋음 (ex. 8코어 CPU → corePoolSize 8)
 - maxPoolSize = Integer.MAX_VALUE
     - Thread Pool이 확장할 수 있는 최대 Thread 수
-    - [Thread Pool 크기 + 초과 요청을 담는 Queue의 크기]가 넘는 요청이 들어온 경우, Thread Pool이 얼만큼 확장할지
+    - [Thread Pool 크기 + 초과 요청을 담는 Queue의 크기]가 넘는 요청이 들어온 경우, Thread Pool을 얼만큼 확장할지
 - queueCapacity = Integer.MAX_VALUE
     - Thread Pool에서 사용할 최대 Queue의 크기
 - threadNamePrefix = “클래스이름-”
