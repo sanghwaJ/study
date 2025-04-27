@@ -175,7 +175,7 @@ public interface TestClient {
                     log.warn("실패: {}", response);
                 }
             } catch (Exception e) {
-                log.error("🔥 호출 실패 - 최종 fallback 처리", e);
+                log.error("호출 실패 - 최종 fallback 처리", e);
                 // fallback 처리: 예를 들면 DB에 실패 기록 저장하거나, 알림 보내기
             }
         }
