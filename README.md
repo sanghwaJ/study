@@ -20,7 +20,8 @@
 - [Java - HttpServletRequest & HttpServletResponse](mdspace/java_httpServlet.md)
 - [Java - Multi Thread](mdspace/java_multiThread.md)
 - [Java - JUnit](mdspace/java_junit.md)
-  
+- [Java - Virtual Thread](mdspace/java_virtual.md)  
+
 ### 📌 Java 문법
 - [Java Tips](mdspace/java_tips.md)
 - [Java - 메소드의 구분](mdspace/java_method.md)
@@ -40,8 +41,6 @@
 - [Java - Optional](mdspace/java_optional.md)
 - [Java - Generic](mdspace/java_generic.md)
 - [Java - ConcurrentHashMap (+ HashMap, HashTable)](mdspace/java_concurrenthashmap.md)
-- [Java - Virtual Thread](mdspace/java_virtual.md)
-
 
 ### 📌 Spring
 - [Spring - Spring VS Spring Boot](mdspace/springAndSpringBoot.md)
