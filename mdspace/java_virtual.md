@@ -126,6 +126,7 @@ spring.threads.virtual.enabled=true
 ### Configuration
 ```java
 @Configuration
+@Async
 public class VirtualThreadConfig {
 
     @Bean
@@ -134,10 +135,10 @@ public class VirtualThreadConfig {
 
         // 위 방법 말고 아래의 두 방법도 존재
         // .startVirtualThread() 사용
-		Thread.startVirtualThread(runnable);
+        Thread.startVirtualThread(runnable);
 
-		// Builder 사용
-		Thread.ofVirtual()
+        // Builder 사용
+        Thread.ofVirtual()
 				.name("Virtual thread") // 생략 가능
 				.start(runnable);
     }
