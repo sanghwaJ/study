@@ -21,7 +21,7 @@
 - [Java - Multi Thread](mdspace/java_multiThread.md)
 - [Java - JUnit](mdspace/java_junit.md)
 - [Java - Virtual Thread](mdspace/java_virtual.md)
-- [Java - Record & Builder & MapStruct](mdspace/java_record.md)
+- [Java - Record & MapStruct](mdspace/java_record.md)
 
 ### 📌 Java 문법
 - [Java Tips](mdspace/java_tips.md)
