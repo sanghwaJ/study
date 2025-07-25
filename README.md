@@ -117,6 +117,7 @@
 - [Elasticsearch](mdspace/elasticsearch.md)
 - [Redis](mdspace/redis.md)
 - [XML vs JSON vs YAML (+ resources 파일 읽기)](mdspace/xmlJsonYaml.md)
+- [MCP](mdspace/mcp.md)
 
 ---
 
