@@ -63,7 +63,27 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/mast
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/baremetal/service-nodeport.yaml
 ```
 
-## 4. LoacBalancer와 Ingress 비교
+## 4. LoadBalancer, Ingress 비교
+
+||LoadBalancer|Ingress|
+|---|---|---|
+|접근 경로|퍼블릭 IP|도메인|
+|로드 밸런싱|L4|L7|
+|도메인 기반 라우팅|X|O|
+|TLS 지원|O|O|
+|외부 진입점 수|서비스 마다 다름|1개로 통합 가능|
+|주 용도|단일 서비스 노출|여러 서비스 통합 & 라우팅|
+
+### L4, L7 비교
+||L4|L7|
+|---|---|---|
+|동작 계층|전송 계층|어플리케이션 계층|
+|주요 프로토콜|TCP, UDP|HTTP, HTTPS, WebSocket, gRPC 등|
+|주요 식별 기준|IP 주소 + 포트 번호|HTTP 메소드, URL, Host, 헤더, 바디 등|
+|라우팅 정밀도|포트 단위(낮음)|경로, 도메인 단위(높음)|
+|속도/성능|빠름|비교적 느림|
+|기능|단순 전달, 포트 기반 LB|도메인/경로 라우팅, TLS 종료, 인증 등|
+|사용 예시|TCP/UDP 로드밸런싱|HTTP 리버스 프록시, API 게이트웨이|
 
 ---
 
