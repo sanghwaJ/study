@@ -65,6 +65,7 @@
 - [Spring - OpenFeign](mdspace/spring_openfeign.md)
 - [Spring - @Primary & @Qualifier](mdspace/spirng_primaryAndQualifier.md)
 - [Spring - ShedLock](mdspace/shedlock.md)
+- [Spring - Spring AI](mdspace/spring_ai.md)
 
 ### 📌 Dart
 
