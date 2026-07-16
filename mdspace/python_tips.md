@@ -781,3 +781,141 @@ def func1():
     func2() 
 func1()
 ```
+
+## 13) DFS(재귀), BFS(Queue)
+
+### 1. 1차원 DFS
+```python
+from collections import defaultdict, deque 
+
+graph = defaultdict(list) 
+
+edges = [ (1, 2), (1, 3), (2, 4), (2, 5), (3, 6), (3, 7) ]
+
+for a, b in edges:
+    graph[a].append(b)
+    graph[b].append(a)
+
+visited = [False] * 8
+
+def dfs(v):
+    visited[v] = True
+    for nxt in graph[v]:
+        if not visited[nxt]:
+            dfs(nxt)
+
+dfs(1)
+```
+
+### 2. 1차원 BFS
+```python
+from collections import defaultdict, deque 
+
+graph = defaultdict(list) 
+
+edges = [ (1, 2), (1, 3), (2, 4), (2, 5), (3, 6), (3, 7) ]
+
+for a, b in edges:
+    graph[a].append(b)
+    graph[b].append(a)
+
+visited = [False] * 8
+
+def bfs(start):
+    q = deque([start])
+    visited[start] = True
+    while q:
+        now = q.popleft()
+        for nxt in graph[now]:
+            if not visited[nxt]:
+                visited[nxt] = True
+                q.append(nxt)
+
+bfs(1)
+```
+
+### 3. 2차원 DFS
+```python
+grid = [
+    [1,1,0,0],
+    [0,1,0,1],
+    [1,1,0,1],
+    [0,0,1,1]
+]
+
+n = len(grid)
+m = len(grid[0])
+
+visited = [[False]*m for _ in range(n)]
+
+# 상 하 좌 우
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
+
+def dfs(x, y):
+    visited[x][y] = True
+
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
+
+        if nx < 0 or nx >= n or ny < 0 or ny >= m:
+            continue
+
+        if visited[nx][ny]:
+            continue
+
+        if grid[nx][ny] == 0:
+            continue
+
+        dfs(nx, ny)
+
+
+dfs(0, 0)
+```
+
+### 4. 2차원 BFS
+```python
+from collections import deque
+
+grid = [
+    [1,1,0,0],
+    [0,1,0,1],
+    [1,1,0,1],
+    [0,0,1,1]
+]
+
+n = len(grid)
+m = len(grid[0])
+
+visited = [[False]*m for _ in range(n)]
+
+dx = [-1,1,0,0]
+dy = [0,0,-1,1]
+
+def bfs(x, y):
+    q = deque()
+    q.append((x, y))
+    visited[x][y] = True
+
+    while q:
+        x, y = q.popleft()
+
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+
+            if nx < 0 or nx >= n or ny < 0 or ny >= m:
+                continue
+
+            if visited[nx][ny]:
+                continue
+
+            if grid[nx][ny] == 0:
+                continue
+
+            visited[nx][ny] = True
+            q.append((nx, ny))
+
+bfs(0, 0)
+```
