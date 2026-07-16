@@ -245,12 +245,35 @@ print(r) # 3628800
 
 ### 1. list sorted
 ```python
+# sorted() : 원본 유지
+new_arr = sorted(arr)
+
+# sort() : 원본 변경
+arr.sort()
+```
+
+```python
+# 1차원 리스트
 a = [2, 4, 1, 9, 100, 29, 40, 10]
 
 # 오름차순
 b = sorted(a) 
 # 내림차순
 c = sorted(a, reverse=True)
+
+# 2차원 리스트
+arr = [
+  [3, 7, 4],
+  [1, 5, 0],
+  [2, 9, 6]
+]
+
+# 1번째 요소로 오름차순 정렬
+sorted_arr = sorted(arr, key = lambda x: x[1])
+# 1번째 요소로 내림차순 정렬
+reverse_sorted_arr = sorted(arr, key = lambda x: x[1], reverse=True)
+
+print(arr)
 ```
 
 ### 2. dictionary sorted
@@ -291,32 +314,7 @@ i = sorted(d)
 print(i)
 ```
 
-### 3. dictionary value sorted (with Operator)
-```python
-import operator
- 
-d = {'b': 400, 'f': 300, 'a': 200, 'd': 100, 'c': 500}
- 
-print('1. 원본 딕셔너리')
-print(d.items())
- 
- 
-print('\n2. 딕셔너리 정렬 : sorted(d.items())')
-f = sorted(d.items())
-print(f)
- 
- 
-print('\n3. 딕셔너리 정렬 : sorted(d.items(), key=operator.itemgetter(1))')
-g = sorted(d.items(), key = operator.itemgetter(1))
-print(g)
- 
- 
-print('\n4. 딕셔너리 정렬 : sorted(d.items(), key=operator.itemgetter(1), reverse=True)')
-h = sorted(d.items(), key = operator.itemgetter(1), reverse=True)
-print(h)
-```
-
-### 3. dictionary value sorted (with lambda)
+### 2. dictionary value sorted (with lambda)
 ```python
 d = {'blockdmask': 400, 'equal': 300, 'apple': 200, 'dish': 100, 'cook': 500}
  
