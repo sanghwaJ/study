@@ -846,7 +846,7 @@ grid = [
 n = len(grid)
 m = len(grid[0])
 
-visited = [[False]*m for _ in range(n)]
+visited = [[False] * m for i in range(n)]
 
 # 상 하 좌 우
 dx = [-1, 1, 0, 0]
@@ -888,7 +888,7 @@ grid = [
 n = len(grid)
 m = len(grid[0])
 
-visited = [[False]*m for _ in range(n)]
+visited = [[False] * m for i in range(n)]
 
 dx = [-1,1,0,0]
 dy = [0,0,-1,1]
