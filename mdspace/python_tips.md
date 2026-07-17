@@ -919,3 +919,16 @@ def bfs(x, y):
 
 bfs(0, 0)
 ```
+
+## 14) 소수 판별 알고리즘
+```python
+def is_prime(n):
+    if n < 2:
+        return False
+
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+
+    return True
+```
